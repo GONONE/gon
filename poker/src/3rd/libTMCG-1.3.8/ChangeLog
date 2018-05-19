@@ -1,0 +1,118 @@
+Copyright (C)  2006, 2007, 2009, 2015, 2016, 2017 Heiko Stamer <HeikoStamer@gmx.net>
+
+Permission is granted to copy, distribute and/or modify this document under
+the terms of the GNU Free Documentation License, Version 1.3 or any later
+version published by the Free Software Foundation; with no Invariant Sections,
+no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included
+in the sources of this package and additionally can be obtained from Internet
+<https://www.gnu.org/licenses>.
+
+* [2017-12-08] release 1.3.8 of LibTMCG
+* [2017-12-06] RFC4880: improved error handling for unsupported public-key algos
+* [2017-12-05] RFC4880: increased S2K count to 0xAC (i.e. 1835008 iterations)
+* [2017-12-04] improved compiler optimization resilience of mpz_fspowm()
+* [2017-12-01] release 1.3.7 of LibTMCG
+* [2017-11-28] mpz_sqrtmp_r(), mpz_sqrtmp(), mpz_sqrtmp_fast(): fix memory leaks
+* [2017-11-27] RFC4880: fixes some buffer underflows in PacketDecode()
+* [2017-11-25] RFC4880: fixes some buffer underflows in SubpacketDecode()
+* [2017-11-25] release 1.3.6 of LibTMCG
+* [2017-11-25] RFC4880: added support for verification of some V3 signatures
+* [2017-11-23] improved timing attack resilience of mpz_spowm()
+* [2017-11-23] RFC4880: added return code 0xFE for non-fatal errors in PacketDecode()
+* [2017-11-22] RFC4880: fixes a buffer overflow in SubpacketDecode()
+* [2017-11-22] RFC4880: added V3 signature packets for PacketDecode()
+* [2017-11-19] aiounicast: increase timeout of Send() for OpenBSD
+* [2017-11-18] release 1.3.5 of LibTMCG
+* [2017-11-18] RFC4880: fixes a bad return value in AsymmetricDecryptElgamal()
+* [2017-11-17] changed interfaces of mpz helper functions *gcry_mpi*
+* [2017-11-17] ASTC: fixes a bad mpz initialization in DSS::Sign()
+* [2017-11-17] VTMF: fixes a memory leak found by valgrind
+* [2017-11-16] RFC4880: fixes some memory leaks found by valgrind
+* [2017-11-16] RFC4880: fixes memory leak of mpi's from dummy container
+* [2017-11-16] RFC4880: added check for correct tag format of MDC packet
+* [2017-11-09] release 1.3.4 of LibTMCG
+* [2017-11-08] RFC4880: added features subpacket for MDC support
+* [2017-11-08] RFC4880: added experimental key type 107 to keep track of x_rvss->QUAL 
+* [2017-10-31] removed DKG tools (now contained in a separated package DKGPG)
+* [2017-10-29] release 1.3.3 of LibTMCG
+* [2017-10-22] DKG-tools: added dkg-keyinfo to show some DSS key parameters
+* [2017-10-20] ASTC: added proactive security: refresh of key shares
+* [2017-10-17] ZVSS: added index conversion in Share()
+* [2017-10-04] DKG-tools: changed default TCP/IP port range start to 55000
+* [2017-10-01] Bugfix: VTMF checking in dkg-decrypt due to FIPS domain parameters
+* [2017-10-01] Bugfix: type casting inside snprintf() of hash function g()
+* [2017-09-05] DKG-tools: fixes upper limit of t-resilience by option "-t"
+* [2017-09-03] release 1.3.2 of LibTMCG
+* [2017-08-23] DKG-tools: added FIPS 186-4 compliance for dkg-gencrs
+* [2017-08-20] RBC: implements a synchonization mechanism in Sync()
+* [2017-08-17] RBC: important bugfixes in Deliver() and DeliverFrom()
+* [2017-08-09] DKG-tools: added built-in TCP/IP message exchange (option "-H")
+* [2017-08-09] added configure feature --disable-dkgtools
+* [2017-08-07] DKG-tools: added option "-P" for setting aiounicast passwords
+* [2017-08-04] DKG-tools: changed storage of public data for shared keys (DKG)
+* [2017-07-30] DKG-tools: added dkg-revoke for revocation of a shared key
+* [2017-07-30] RFC4880: interface of PacketDecode() changed
+* [2017-07-28] RFC4880: added interfaces for key revocation signatures
+* [2017-07-27] DKG-tools: added dkg-sign for creating detached signatures
+* [2017-07-27] DKG-tools: added option "-e" for expiration of keys and sigs
+* [2017-07-27] RFC4880: more interfaces for signatures changed or added
+* [2017-07-23] RFC4880: interface of Packet{Pub,Sec}Encode() changed 
+* [2017-07-22] RFC4880: interface of PacketS{ub,sb}Encode() changed for DSA
+* [2017-07-22] DKG-tools: added option "-s" for generating a shared DSA key
+* [2017-07-21] added threshold DSS/DSA scheme of Canetti et al. (ASTC, DSS)
+* [2017-06-27] DKG-tools: improved interactive version of dkg-decrypt
+* [2017-06-20] added Pedersen's verifiable secret sharing (VSS) protocol
+* [2017-06-15] RBC: added sequence counter separation for subprotocols
+* [2017-06-12] RFC4880: added support for other hash algorithms in DSA
+* [2017-06-03] DKG-tools: added options "-i" and "-o" for dkg-decrypt
+* [2017-06-02] DKG-tools: added support for other symmetric algorithms
+* [2017-06-02] RFC4880: added generic SymmetricDecrypt() for full RFC compliance
+* [2017-05-25] release 1.3.1 of LibTMCG
+* [2017-05-25] VSSHE: added a simple variant of SetupGenerators_publiccoin()
+* [2017-05-19] DKG: use very strong randomness from libgcrypt (long term keys)
+* [2017-05-15] RFC4880: added implementation of Partial Body Lengths
+* [2017-05-13] release 1.3.0 of LibTMCG
+* [2017-05-13] moved to GNU FDL v1.3
+* [2017-05-04] fixed RBC implementation for artificial case where t=0
+* [2017-04-27] improved timing attack resilience of mpz_spowm()
+* [2017-04-26] improved timing attack resilience of mpz_fspowm()
+* [2017-04-23] AIO: bugfixes and change to EtA paradigma 
+* [2017-04-12] fixed some small bugs found by coverity scan
+* [2017-03-31] added simple manpages for DKG-tools
+* [2017-03-26] added general interpolation for DKG and changed dkg-decrypt 
+* [2017-02-04] added check (t-mpz) to spot optimizations of mpz_fspowm()
+* [2017-01-25] DKG, ASTC: fixed robustness issues in Generate() and Share()
+* [2017-01-21] VTMF: added generation and check of canonical group generator
+* [2017-01-20] VTMF: improved NIZK generation (added group parameter hashing)
+* [2016-12-31] release 1.2.0 of LibTMCG
+* [2016-12-24] added GNUnet integration for DKG-tools
+* [2016-11-14] added a very limited interface for OpenPGP (cf. RFC 4880) 
+* [2016-03-26] improved complexity of hash function g() used as random oracle
+* [2016-03-24] mpz_shash* using now hash function g() instead of h()
+* [2016-03-20] protection against malicious verifiers through EDCF for SHVZK
+* [2016-03-02] provides a distributed coin-flipping (EDCF) protocol
+* [2016-02-27] provides a distributed signature scheme (NTS)
+* [2016-02-24] provides a reliable broadcast (RBC) protocol
+* [2016-02-15] provides a distributed key generation (DKG) protocol
+* [2016-02-07] provides a non-interactive version of the rotation protocol
+* [2016-02-07] provides a non-interactive version of the shuffle protocol
+* [2016-02-06] new global symbol TMCG_MAX_FPOWM_N for restricting memory usage
+* [2016-02-02] increase some security and bounding parameters
+* [2016-01-31] implements an 1-out-of-n oblivious transfer protocol
+* [2016-01-16] added configure option --with-gmp=<path>
+* [2015-12-30] increase default security parameters to state of the art values
+* [2015-12-25] release 1.1.3 of LibTMCG
+* [2015-07] several files changed to reflect the new situation
+* [2009-11-21] feature "--disable-forking" for ./configure added
+* [2009-11-21] syntax error in libTMCG.texi fixed
+* [2009-08-07] release 1.1.2 of LibTMCG
+* small bugfixes for GCC 4.3.x
+* [2007-05-05] release 1.1.1 of LibTMCG
+* [2007-05-05] security fix (trivial group generator attack)
+* [2007-04-16] release 1.1.0 of LibTMCG
+* [2007-04-15] changed interface of TMCG_SecretKey to allow non-NIZK keys
+* [2007-04-13] use faster shuffle algorithm in TMCG_CreateStackSecret(...)
+* [2007-03-22] release 1.0.1 of LibTMCG
+* [2007-03-21] function version_libTMCG() added
+* [2007-03-20] security fix (avoid modulo bias in TMCG_CreateStackSecret(...))
+* [2006-04-13] initial release 1.0.0 of LibTMCG
