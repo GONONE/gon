@@ -5,6 +5,7 @@
 
 - quick start
 
+
 ./autogen.sh
 
 ./configure --with-gui=no
