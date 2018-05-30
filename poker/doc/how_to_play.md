@@ -10,11 +10,11 @@ How to Play
 
 游戏中的所有指令都遵循以下格式:
 
-  ./bitcoin-cli  <command>  <params> 
+  ./poker-cli  <command>  <params> 
 
 如下注10筹码对应的指令为:
 
-  ./bitcoin-cli pokerbet 10
+  ./poker-cli pokerbet 10
 
 注意,游戏过程中以下指令请按照顺序执行
 
